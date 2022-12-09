@@ -5,7 +5,8 @@ from django.db import models
 
 def valid_range(value):
     if value < 0 or value > 100:
-        raise ValidationError();
+        raise ValidationError('value is not within the range!')
+
 
 class Thing(models.Model):
     name = models.CharField(max_length=30, unique=True, blank=False)
