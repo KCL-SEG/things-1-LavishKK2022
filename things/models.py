@@ -10,5 +10,5 @@ def valid_range(value):
 
 class Thing(models.Model):
     name = models.CharField(max_length=30, unique=True, blank=False)
-    description = models.TextField(max_length=120, blank=True)
+    description = models.CharField(max_length=120, blank=True)
     quantity = models.IntegerField(blank=False, validators=[valid_range])
